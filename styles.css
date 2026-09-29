@@ -11,3 +11,17 @@
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
 @media (max-width:860px) { .menu-toggle { display:block; } .site-nav { display:none; position:absolute; top:76px; left:0; right:0; padding:1rem 24px 1.5rem; background:var(--ivory); border-bottom:1px solid rgba(18,58,91,.11); flex-direction:column; align-items:flex-start; gap:1rem; } .site-nav.open { display:flex; } .hero { padding:68px 0 64px; } .hero-grid,.pages-grid,.details-grid,.faq-wrap,.preview-frame { grid-template-columns:1fr; } .hero-grid { gap:3rem; } .hero-product { width:min(430px,92%); justify-self:center; } .hero-note { left:-20px; } .steps-grid { grid-template-columns:1fr 1fr; } .pages-grid,.details-grid,.faq-wrap { gap:3.2rem; } .pages-copy { position:static; } .preview-frame { padding:3rem; gap:2rem; } .preview-sheet { justify-self:center; } }
 @media (max-width:560px) { .container { width:min(100% - 32px,1120px); } .nav-wrap { height:66px; } .site-nav { top:66px; padding-inline:16px; } .hero { min-height:auto; padding:58px 0 52px; } h1 { font-size:clamp(2.55rem,12.2vw,3.45rem); line-height:1.08; } h2 { font-size:2.25rem; } .hero-intro { font-size:1rem; } .hero-actions { align-items:flex-start; flex-direction:column; } .hero-facts { display:grid; gap:.35rem; } .hero-facts li::after { display:none; } .hero-product { width:100%; } .workbook-stack { width:330px; height:355px; } .sheet { width:230px; height:300px; } .sheet-back { left:65px; } .sheet-front { left:16px; top:35px; } .hero-note { left:-8px; bottom:8px; font-size:.67rem; } .intro-section,.pages-section,.details-section { padding:78px 0; } .method-section,.faq-section { padding:72px 0; } .steps-grid { grid-template-columns:1fr; } .step-card { min-height:0; padding:1.35rem; } .step-card span { margin-bottom:1.35rem; } .page-row { grid-template-columns:74px 1fr; } .preview-section { padding:2rem 0; } .preview-frame { padding:2.25rem 1.4rem; min-height:0; } .details-copy dl div { grid-template-columns:1fr; gap:.3rem; } .closing-section { padding:82px 0; } .footer-wrap { display:block; } .footer-wrap p + p { margin-top:.35rem; } }
+/* Hero mockup safety override */
+.hero-product { max-width: 430px; justify-self: center; }
+.workbook-stack { width: 390px; height: 430px; margin: 0 auto; }
+.sheet { width: 276px; height: 355px; overflow: hidden; }
+.sheet-back { top: 10px; left: 75px; right: auto; }
+.sheet-front { left: 22px; top: 45px; }
+.hero-note { left: -30px; bottom: 30px; }
+@media (max-width: 560px) {
+  .workbook-stack { width: 330px; height: 355px; }
+  .sheet { width: 230px; height: 300px; }
+  .sheet-back { left: 65px; }
+  .sheet-front { left: 16px; top: 35px; }
+  .hero-note { left: -8px; bottom: 8px; }
+}
